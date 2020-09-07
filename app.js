@@ -1,5 +1,11 @@
 const express = require('express')
+const session = require('express-session')
 const exphbs = require('express-handlebars')
+const flash = require('connect-flash')
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config()
+}
+
 const bodyParser = require('body-parser')
 const methodOverride = require('method-override')
 const bcrypt = require('bcryptjs')
